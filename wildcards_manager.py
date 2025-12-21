@@ -26,9 +26,6 @@ class WildcardManager:
 
     def process(self, text, visible_text):
         if self._contains_wildcards(text):
-
-            self._process_command(text, visible_text)
-
             text = self._replace_wildcard(text)
 
         return text, visible_text
@@ -163,13 +160,3 @@ class WildcardManager:
             return random.choice(wildcard).strip()
 
         return wildcards
-
-    def _process_command(self, text):
-        if self._contains_command(text):
-
-            # extract command
-
-            # remove command
-            # execute command
-
-            return text
